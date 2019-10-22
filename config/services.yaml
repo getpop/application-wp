@@ -1,0 +1,4 @@
+services:
+    PoP\ApplicationWP\LooseContracts\:
+        resource: '../src/LooseContracts/*'
+        public: true

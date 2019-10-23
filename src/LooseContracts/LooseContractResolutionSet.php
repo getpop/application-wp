@@ -1,7 +1,7 @@
 <?php
 namespace PoP\ApplicationWP\LooseContracts;
 
-use PoP\LooseContracts\Contracts\AbstractLooseContractResolutionSet;
+use PoP\LooseContracts\AbstractLooseContractResolutionSet;
 
 class LooseContractResolutionSet extends AbstractLooseContractResolutionSet
 {

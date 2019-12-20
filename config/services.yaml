@@ -5,6 +5,10 @@ services:
             PoP\LooseContracts\NameResolverInterface: '@loose_contract_name_resolver'
             PoP\LooseContracts\LooseContractManagerInterface: '@loose_contract_manager'
 
+    post_type_api:
+        class: \PoP\ApplicationWP\TypeAPIs\PostTypeAPI
+        public: true
+
     PoP\ApplicationWP\LooseContracts\:
         resource: '../src/LooseContracts/*'
         public: true

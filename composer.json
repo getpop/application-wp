@@ -19,9 +19,9 @@
     "prefer-stable": true,
     "require": {
         "php" : "~7.1",
-        "getpop/application": "^1.0@dev",
-        "getpop/engine-wp": "^1.0@dev",
-        "getpop/posts-wp": "^1.0@dev"
+        "getpop/application": "~0.1",
+        "getpop/engine-wp": "~0.1",
+        "getpop/posts-wp": "~0.1"
     },
     "require-dev": {
         "phpunit/phpunit" : ">=7.0",

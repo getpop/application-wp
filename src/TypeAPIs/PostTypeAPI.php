@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace PoP\ApplicationWP\TypeAPIs;
 
 use PoP\Hooks\Facades\HooksAPIFacade;

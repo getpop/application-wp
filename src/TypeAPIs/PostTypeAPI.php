@@ -16,10 +16,10 @@ class PostTypeAPI extends \PoP\PostsWP\TypeAPIs\PostTypeAPI
             $postID,
         ) = $this->getPostObjectAndID($postObjectOrID);
         $readmore = sprintf(
-	        TranslationAPIFacade::getInstance()->__('... <a href="%s">Read more</a>', 'pop-application'),
-	        $this->getPermalink($postObjectOrID)
-	    );
-	    $value = empty($post->post_excerpt) ? \limitString(\strip_tags(\strip_shortcodes($post->post_content)), $this->getExcerptLength(), $readmore) : $post->post_excerpt;
-	    return HooksAPIFacade::getInstance()->applyFilters('get_the_excerpt', $value, $postID);
+            TranslationAPIFacade::getInstance()->__('... <a href="%s">Read more</a>', 'pop-application'),
+            $this->getPermalink($postObjectOrID)
+        );
+        $value = empty($post->post_excerpt) ? \limitString(\strip_tags(\strip_shortcodes($post->post_content)), $this->getExcerptLength(), $readmore) : $post->post_excerpt;
+        return HooksAPIFacade::getInstance()->applyFilters('get_the_excerpt', $value, $postID);
     }
 }

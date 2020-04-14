@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PoP\ApplicationWP\TypeAPIs;
+namespace PoP\ApplicationWP\Conditional\Posts\TypeAPIs;
 
 use PoP\Hooks\Facades\HooksAPIFacade;
 use PoP\Translation\Facades\TranslationAPIFacade;

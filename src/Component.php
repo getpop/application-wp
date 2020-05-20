@@ -47,7 +47,7 @@ class Component extends AbstractComponent
         self::initYAMLServices(self::$COMPONENT_DIR);
 
         if (class_exists('\PoP\Posts\Component')) {
-            \PoP\ApplicationWP\Conditional\Posts\ConditionalComponent::init();
+            \PoP\ApplicationWP\Conditional\Posts\ConditionalComponent::initialize();
         }
     }
 

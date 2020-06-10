@@ -50,7 +50,9 @@ class Component extends AbstractComponent
         self::initYAMLServices(self::$COMPONENT_DIR);
         self::maybeInitYAMLSchemaServices(self::$COMPONENT_DIR, $skipSchema);
 
-        if (class_exists('\PoP\Posts\Component')) {
+        if (class_exists('\PoP\Posts\Component')
+            && !in_array(\PoP\Posts\Component::class, $skipSchemaComponentClasses)
+        ) {
             \PoP\ApplicationWP\Conditional\Posts\ConditionalComponent::initialize(
                 $configuration,
                 $skipSchema

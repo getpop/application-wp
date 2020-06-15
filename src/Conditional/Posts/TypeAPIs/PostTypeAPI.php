@@ -17,7 +17,7 @@ class PostTypeAPI extends \PoP\PostsWP\TypeAPIs\PostTypeAPI
         list(
             $post,
             $postID,
-        ) = $this->getPostObjectAndID($postObjectOrID);
+        ) = $this->getCustomPostObjectAndID($postObjectOrID);
         $readmore = sprintf(
             TranslationAPIFacade::getInstance()->__('... <a href="%s">Read more</a>', 'pop-application'),
             $this->getPermalink($postObjectOrID)

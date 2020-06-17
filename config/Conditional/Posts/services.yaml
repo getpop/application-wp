@@ -1,4 +1,0 @@
-services:
-    custompost_type_api:
-        class: \PoP\ApplicationWP\Conditional\Posts\TypeAPIs\CustomPostTypeAPI
-        public: true

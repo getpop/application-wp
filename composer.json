@@ -23,12 +23,12 @@
         "getpop/engine-wp": "dev-master"
     },
     "require-dev": {
-        "getpop/posts": "dev-master",
+        "getpop/customposts": "dev-master",
         "phpunit/phpunit": ">=7.0",
         "squizlabs/php_codesniffer": "^3.0"
     },
     "suggest": {
-        "getpop/posts": "Integrates well with Posts"
+        "getpop/customposts": "Integrates well with Custom Posts"
     },
     "autoload": {
         "psr-4": {

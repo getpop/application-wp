@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PoP\ApplicationWP\Conditional\Posts;
+namespace PoP\ApplicationWP\Conditional\CustomPosts;
 
 use PoP\ApplicationWP\Component;
 use PoP\Root\Component\YAMLServicesTrait;
@@ -19,6 +19,6 @@ class ConditionalComponent
         bool $skipSchema = false,
         array $skipSchemaComponentClasses = []
     ): void {
-        self::initYAMLServices(Component::$COMPONENT_DIR, '/Conditional/Posts');
+        self::initYAMLServices(Component::$COMPONENT_DIR, '/Conditional/CustomPosts');
     }
 }

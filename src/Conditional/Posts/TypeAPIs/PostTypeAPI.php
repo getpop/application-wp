@@ -27,7 +27,7 @@ class CustomPostTypeAPI extends \PoP\CustomPostsWP\TypeAPIs\CustomPostTypeAPI
                 \strip_tags(
                     \strip_shortcodes($customPost->post_content)
                 ),
-                $this->getExcerptLength(),
+                \getExcerptLength(),
                 $readmore
             ) :
             $customPost->post_excerpt;

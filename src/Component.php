@@ -33,7 +33,7 @@ class Component extends AbstractComponent
     public static function getDependedConditionalComponentClasses(): array
     {
         return [
-            \PoP\CustomPosts\Component::class,
+            \PoPSchema\CustomPosts\Component::class,
         ];
     }
 
@@ -50,8 +50,8 @@ class Component extends AbstractComponent
         self::initYAMLServices(self::$COMPONENT_DIR);
         self::maybeInitYAMLSchemaServices(self::$COMPONENT_DIR, $skipSchema);
 
-        if (class_exists('\PoP\CustomPosts\Component')
-            && !in_array(\PoP\CustomPosts\Component::class, $skipSchemaComponentClasses)
+        if (class_exists('\PoPSchema\CustomPosts\Component')
+            && !in_array(\PoPSchema\CustomPosts\Component::class, $skipSchemaComponentClasses)
         ) {
             \PoP\ApplicationWP\Conditional\CustomPosts\ConditionalComponent::initialize(
                 $configuration,

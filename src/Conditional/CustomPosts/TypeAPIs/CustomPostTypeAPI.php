@@ -10,7 +10,7 @@ use PoP\Translation\Facades\TranslationAPIFacade;
 /**
  * Methods to interact with the Type, to be implemented by the underlying CMS
  */
-class CustomPostTypeAPI extends \PoP\CustomPostsWP\TypeAPIs\CustomPostTypeAPI
+class CustomPostTypeAPI extends \PoPSchema\CustomPostsWP\TypeAPIs\CustomPostTypeAPI
 {
     public function getExcerpt($customPostObjectOrID): ?string
     {

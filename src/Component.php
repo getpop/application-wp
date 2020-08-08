@@ -26,18 +26,6 @@ class Component extends AbstractComponent
     }
 
     /**
-     * All conditional component classes that this component depends upon, to initialize them
-     *
-     * @return array
-     */
-    public static function getDependedConditionalComponentClasses(): array
-    {
-        return [
-            \PoPSchema\CustomPosts\Component::class,
-        ];
-    }
-
-    /**
      * Initialize services
      */
     protected static function doInitialize(
@@ -48,16 +36,6 @@ class Component extends AbstractComponent
         parent::doInitialize($configuration, $skipSchema, $skipSchemaComponentClasses);
         self::$COMPONENT_DIR = dirname(__DIR__);
         self::initYAMLServices(self::$COMPONENT_DIR);
-        self::maybeInitYAMLSchemaServices(self::$COMPONENT_DIR, $skipSchema);
-
-        if (class_exists('\PoPSchema\CustomPosts\Component')
-            && !in_array(\PoPSchema\CustomPosts\Component::class, $skipSchemaComponentClasses)
-        ) {
-            \PoP\ApplicationWP\Conditional\CustomPosts\ConditionalComponent::initialize(
-                $configuration,
-                $skipSchema
-            );
-        }
     }
 
     /**

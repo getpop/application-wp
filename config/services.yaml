@@ -1,10 +1,7 @@
 services:
     _defaults:
-        bind:
-            PoP\Hooks\HooksAPIInterface: '@hooks_api'
-            PoP\LooseContracts\NameResolverInterface: '@loose_contract_name_resolver'
-            PoP\LooseContracts\LooseContractManagerInterface: '@loose_contract_manager'
+        public: true
+        autowire: true
 
     PoP\ApplicationWP\LooseContracts\:
         resource: '../src/LooseContracts/*'
-        public: true
